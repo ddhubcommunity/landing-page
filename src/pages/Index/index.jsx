@@ -1,6 +1,8 @@
 import jumbo from '../../assets/png/jumbo.png'
 import HandsHeld from '../../assets/svg/handsHeld'
+import Plug from '../../assets/svg/plug'
 import Questions from '../../assets/svg/questions'
+import HireButton from '../../components/hire button'
 import otherProducts from '../../utils/otherProducts'
 import products from '../../utils/products'
 import './index.scss'
@@ -9,7 +11,7 @@ const Index = () => {
     return(
         <div className="index">
             <div className="container">
-                <div className="jumbo">
+                <div className="jumbo" >
                     <img src={jumbo} alt="" />
                 </div>
                 <div className="cta">
@@ -19,11 +21,10 @@ const Index = () => {
                     <p>
                         But that’s not all. When you work with us, expect complete transparency, strategic recommendations, and premium service
                     </p>
-                    <div>
-                        <a href="/hire">
-                            Hire us
-                        </a>
-                    </div>
+                    <HireButton />
+                </div>
+                <div className="desktop_jumbo">
+                    
                 </div>
                 <div className='choose'>
                     <Questions />
@@ -106,6 +107,22 @@ const Index = () => {
                 <p>
                     Work with us
                 </p>
+            </div>
+            <div className="container">
+                <div className="final_Cta">
+                    <p className="title">
+                        Let us take your ideas and your brand to the next level
+                    </p>
+                    <HireButton />
+                </div>
+                <div className="plug">
+                    <div className="center">
+                        <Plug />
+                        <p>
+                            Do you want to contact us?
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     )

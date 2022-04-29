@@ -15,7 +15,13 @@ const HeaderWrap = ({children}) => {
             <div className="mobileNav">
                <div className="navContain">
                    <div className="top">
-                        <div className="logo">
+                        <div className="logo" onClick={
+                            ()=> {
+                                console.log('clicked');
+                                window.location.href = '/'
+                            }
+
+                        }>
                             <img src={logo} alt="" />
                         </div>
                         <div onClick={()=> setOpen(!open)} className="navControl">

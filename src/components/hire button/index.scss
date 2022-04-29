@@ -1,0 +1,14 @@
+div.hire_button {
+  display: flex;
+  justify-content: center;
+  a {
+    display: inline-block;
+    padding: 12px 64px;
+    color: white;
+    background: linear-gradient(90deg, #fe0002 -116.52%, #ffaa77 159.77%);
+    margin: auto;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+}
