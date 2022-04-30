@@ -79,7 +79,7 @@ const HeaderWrap = ({children}) => {
                     </a>
                 </div>
             </div>
-            {children}
+            {/* {children} */}
         </div>
     )
 }
