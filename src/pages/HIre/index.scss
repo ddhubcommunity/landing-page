@@ -1,0 +1,377 @@
+@mixin responsive($screen) {
+    @if $screen==desktop {
+      @media screen and (min-width: 769px) {
+        @content;
+      }
+    }
+    @if $screen==phone {
+      @media screen and (max-width: 768px) {
+        @content;
+      }
+    }
+  }
+
+@include responsive(desktop){
+.hire_page {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  .message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 62px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #010101;
+      opacity: 70%;
+      margin-bottom: 24px;
+    }
+    p {
+      color: linear-gradient(
+        180deg,
+        #000000 0%,
+        #455a64 11.51%,
+        #263238 22.31%
+      );
+      width: 40%;
+      font-family: Mulish;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 24px;
+    .entries {
+      width: 100%;
+      display: flex;
+
+      .entry {
+        width: 33%;
+        background: #736e6e05;
+        border: 1px solid #a48a8a1a;
+        padding: 54px 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          span {
+            font-weight: 400;
+            text-align: left;
+            color: red;
+            text-transform: capitalize;
+            font-size: 24px;
+          }
+          font-family: Raleway;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 38px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #736e6e;
+        }
+
+        span {
+          color: rgba($color: #a48a8a, $alpha: 0.7);
+          font-family: Raleway;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0em;
+        }
+        .input {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 12px;
+
+          span {
+            color: #736e6e;
+            font-family: Poppins;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+
+          input[type="number"] {
+            width: 100px;
+          }
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba($color: #a48a8a, $alpha: 0.5);
+            height: 40px;
+            background: none;
+          }
+          ::placeholder {
+            color: rgba($color: #736e6e, $alpha: 0.28);
+            font-family: Poppins;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .button {
+      background: linear-gradient(90deg, #fe0002 -116.52%, #ffaa77 159.77%);
+      height: 50px;
+      width: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-top: 24px;
+      color: #ffffff;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: justified;
+      border-radius: 5px;
+    }
+  }
+
+  .socials{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 24px;
+      div{
+          margin: 12px;
+      }
+  }
+
+  .bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    position: relative;
+
+    
+    a{
+      color: #FE0002;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 24px;
+      text-decoration: none;
+      
+    }
+   span{ color: #736E6E;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+   }
+  }
+}}
+@include responsive(phone){
+.hire_page {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  .message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-family: Poppins;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 62px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #010101;
+      opacity: 70%;
+      margin-bottom: 24px;
+    }
+    p {
+      color: linear-gradient(
+        180deg,
+        #000000 0%,
+        #455a64 11.51%,
+        #263238 22.31%
+      );
+      width: 100%;
+      font-family: Mulish;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 24px;
+    .entries {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .entry {
+        width: 100%;
+        background: #736e6e05;
+        border: 1px solid #a48a8a1a;
+        padding: 54px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px;
+        box-sizing: border-box;
+        p {
+          span {
+            font-weight: 400;
+            text-align: left;
+            color: red;
+            text-transform: capitalize;
+            font-size: 14px;
+          }
+          font-family: Raleway;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 38px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #736e6e;
+        }
+
+        span {
+          color: rgba($color: #a48a8a, $alpha: 0.7);
+          font-family: Raleway;
+          font-size: 10px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0em;
+        }
+        .input {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 12px;
+
+          span {
+            color: #736e6e;
+            font-family: Poppins;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+
+          input[type="number"] {
+            width: 100px;
+          }
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba($color: #a48a8a, $alpha: 0.5);
+            height: 40px;
+            background: none;
+          }
+          ::placeholder {
+            color: rgba($color: #736e6e, $alpha: 0.28);
+            font-family: Poppins;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 51px;
+            letter-spacing: 0em;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .button {
+      background: linear-gradient(90deg, #fe0002 -116.52%, #ffaa77 159.77%);
+      height: 50px;
+      width: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-top: 24px;
+      color: #ffffff;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: justified;
+      border-radius: 5px;
+    }
+  }
+
+  .socials{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 24px;
+      div{
+          margin: 12px;
+      }
+  }
+
+  .bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    flex-direction: column;
+    position: relative;
+
+   
+    a{
+      color: #FE0002;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 14px;
+      text-decoration: none;
+      
+    }
+   span{ color: #736E6E;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+   }
+  }
+}}

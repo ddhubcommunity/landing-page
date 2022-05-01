@@ -10,6 +10,7 @@ import products from "../../utils/products";
 import Mask from '../../assets/png/mask.png'
 import Bro from '../../assets/png/bro.png'
 import "./index.scss";
+import FooterFull from "../../components/footer full";
 
 const Index = () => {
   return (
@@ -146,6 +147,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <FooterFull/>
+
     </div>
   );
 };

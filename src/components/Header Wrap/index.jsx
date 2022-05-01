@@ -11,7 +11,7 @@ const HeaderWrap = ({children}) => {
     const location = useLocation()
     console.log(location.pathname);
     return(
-        <div className="headerWrap">
+        <div id="top" className="headerWrap">
             <div className="mobileNav">
                <div className="navContain">
                    <div className="top">

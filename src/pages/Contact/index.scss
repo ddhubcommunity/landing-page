@@ -1,0 +1,165 @@
+@mixin responsive($screen) {
+    @if $screen==desktop {
+      @media screen and (min-width: 769px) {
+        @content;
+      }
+    }
+    @if $screen==phone {
+      @media screen and (max-width: 768px) {
+        @content;
+      }
+    }
+  }
+@include responsive(desktop){
+.contact_page{
+    // display: flex;
+ .content{
+     display: flex;
+     width: 100%;
+    padding: 0 64px;
+    justify-content: space-between;
+     
+ }
+    .img{
+        width: 50%;
+    }
+    .form{
+        width: 40%;
+        h1{
+            color: #736E6E;
+            font-family: Raleway;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 47px;
+            letter-spacing: 0em;
+            text-align: justified;
+            padding: 24px;
+            
+        }
+
+        form{
+            box-shadow: 0px 0px 24px 6px #FE00020F;
+            border-radius: 11px;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+            label{
+                display: flex;
+                flex-direction: column;
+                margin: 12px;
+                // width: 100%;
+                span{
+                    color: #736E6E;
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 23px;
+                    letter-spacing: 0em;
+                    text-align: justified;
+                    
+                }
+
+                input,textarea{
+                    border: 1px solid rgba($color: #A48A8A, $alpha: .5);
+                    border-radius: 5px;
+                }
+                input{
+                    height: 44px;
+                }
+            }
+
+            button{
+                background: linear-gradient(90deg, #FE0002 -116.52%, #FFAA77 159.77%);
+                height: 44px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: justified;
+                border: none;
+                
+            }
+        }
+    }
+}}
+@include responsive(phone){
+.contact_page{
+    // display: flex;
+ .content{
+     display: flex;
+     width: 100%;
+    padding: 0 16px;
+    justify-content: space-between;
+     
+ }
+    .img{
+        display: none;
+    }
+    .form{
+        width: 100%;
+        margin-bottom: 32px;
+        h1{
+            color: #736E6E;
+            font-family: Raleway;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 47px;
+            letter-spacing: 0em;
+            text-align: center;
+            padding: 16px;
+            
+        }
+
+        form{
+            box-shadow: 0px 0px 24px 6px #FE00020F;
+            border-radius: 11px;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            box-sizing: border-box;
+            label{
+                display: flex;
+                flex-direction: column;
+                margin: 12px;
+                // width: 100%;
+                span{
+                    color: #736E6E;
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 23px;
+                    letter-spacing: 0em;
+                    text-align: justified;
+                    
+                }
+
+                input,textarea{
+                    border: 1px solid rgba($color: #A48A8A, $alpha: .5);
+                    border-radius: 5px;
+                }
+                input{
+                    height: 44px;
+                }
+            }
+
+            button{
+                background: linear-gradient(90deg, #FE0002 -116.52%, #FFAA77 159.77%);
+                height: 44px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: justified;
+                border: none;
+                
+            }
+        }
+    }
+}}
